@@ -1,14 +1,9 @@
 import CheeseList from "@/components/CheeseList.js";
+import { cheese } from "@/lib/data.js";
 
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/cheese");
-
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
+  // Would normally fetch data from an API
+  return cheese;
 }
 
 export default async function Home() {
