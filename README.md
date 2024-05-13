@@ -32,3 +32,7 @@ npm run dev
 ```bash
 npm run test
 ```
+
+## Use the app
+
+Navigate to [http://localhost:3000](http://localhost:3000)
