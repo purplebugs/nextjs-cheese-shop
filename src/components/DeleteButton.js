@@ -3,7 +3,7 @@
 async function deleteCheese(id) {
   console.log(id);
 
-  const res = await fetch(`http://localhost:3000/api/cheese/${id}`, { method: "DELETE" });
+  const res = await fetch(`/api/cheese/${id}`, { method: "DELETE" });
 
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
