@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 export async function GET(req, context) {
   // http://localhost:3000/api/cheese/1
 
-  const { id } = context.params;
+  const { id } = await context?.params;
 
   const the_cheese = cheese.find((c) => c.id === id);
 
@@ -16,7 +16,7 @@ export async function GET(req, context) {
 export async function DELETE(req, context) {
   // http://localhost:3000/api/cheese/1
 
-  const { id } = context.params;
+  const { id } = await context?.params;
 
   const the_cheese = cheese.find((c) => c.id === id);
 
