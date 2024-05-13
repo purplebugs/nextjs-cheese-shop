@@ -7,13 +7,27 @@ Try out
 
 ## Getting Started
 
-First, run the development server:
+Either use Docker or node.js
+
+### Using docker
+
+1. [Install Docker](https://docs.docker.com/get-docker/) on your machine.
+2. Build your container: `docker build -t nextjs-docker .`.
+3. Run your container: `docker run -p 3000:3000 nextjs-docker`.
+
+You can view your images created with `docker images`.
+
+### Using node.js
+
+1. Assumes node.js is installed and repo is cloned
+
+2. Run the dev server
 
 ```bash
 npm run dev
 ```
 
-## Test
+3. Run the tests
 
 ```bash
 npm run test
