@@ -12,8 +12,8 @@ Either use Docker or node.js
 ### Using docker
 
 1. [Install Docker](https://docs.docker.com/get-docker/) on your machine.
-2. Build your container: `docker compose build`
-3. Run your container: `docker compose up`
+2. Build your container: `docker build -t nextjs-docker .`
+3. Run your container: `docker run -p 3000:3000 nextjs-docker`
 
 You can view your images created with `docker images`
 
