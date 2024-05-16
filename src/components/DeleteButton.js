@@ -1,8 +1,6 @@
 "use client";
 
 async function deleteCheese(id) {
-  console.log(id);
-
   const res = await fetch(`/api/cheese/${id}`, { method: "DELETE" });
 
   if (!res.ok) {
@@ -11,7 +9,6 @@ async function deleteCheese(id) {
   }
 
   const result = await res.json();
-  console.log(result);
   alert(`
   Message from API: ${result?.message}.
 
