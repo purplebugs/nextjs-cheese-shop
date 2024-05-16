@@ -19,7 +19,7 @@ describe("GET /api/cheese/[id]", () => {
     const response = await GET(NextRequest, { params: { id: id } });
     const body = await response.json();
 
-    expect(response.status).toBe(405);
+    expect(response.status).toBe(404);
     expect(body.message).toBe(`Cheese with id ${id} not found`);
   });
 });
