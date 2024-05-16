@@ -14,7 +14,6 @@ import la_peral from "@/public/cheese/la_peral.jpg";
 const images = [adelost, danbo, la_peral];
 
 export default function CheeseItem({ cheese }) {
-  console.log(cheese?.price);
   return (
     <fieldset key={cheese?.id} className="flex items-center">
       <input

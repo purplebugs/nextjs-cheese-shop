@@ -10,7 +10,7 @@ export default async function Home() {
   const data = await getData();
 
   if (!data) return null;
-  console.log(data);
+
   return (
     <article>
       <div className="divide-y divide-gray-300/50">

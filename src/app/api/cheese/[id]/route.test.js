@@ -31,7 +31,6 @@ describe("DELETE /api/cheese/[id]", () => {
     const body = await response.json();
 
     expect(response?.status).toBe(200);
-    console.log(response.statusText);
     expect(body.message).toBe(`Cheese with id ${id} deleted`);
   });
 });

@@ -4,7 +4,6 @@ import { useState } from "react";
 
 export default function CheeseList({ data }) {
   const [totalPrice, setTotalPrice] = useState(0);
-  console.log(data);
 
   function onSubmit(e) {
     e.preventDefault();
@@ -15,7 +14,6 @@ export default function CheeseList({ data }) {
     // const entries = Array.from(formData.entries());
     const cheeseValues = Array.from(formData.values());
 
-    console.log(cheeseValues);
     calculateTotalPrice(cheeseValues);
   }
 
