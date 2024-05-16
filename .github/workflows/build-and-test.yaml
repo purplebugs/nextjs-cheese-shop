@@ -6,13 +6,18 @@ on:
   pull_request:
     branches: ["main"]
 
+env:
+  DATE_TAG: $(date +%s)
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Show the variable
+        run: echo "The value of DATE_TAG is $DATE_TAG"
       - uses: actions/checkout@v4
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag my-image-name:$(date +%s) --target builder .
+        run: docker build . --file Dockerfile --tag my-image-name:$DATE_TAG --target builder
       - name: List Docker images
         run: docker images
