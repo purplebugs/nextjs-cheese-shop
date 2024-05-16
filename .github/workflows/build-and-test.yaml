@@ -18,6 +18,6 @@ jobs:
         run: echo "The value of DATE_TAG is $DATE_TAG"
       - uses: actions/checkout@v4
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag my-image-name:$DATE_TAG --target builder
+        run: docker build . --file Dockerfile --tag my-image-name:$DATE_TAG
       - name: List Docker images
         run: docker images
