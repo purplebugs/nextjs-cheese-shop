@@ -1,0 +1,20 @@
+name: Cheese Shop 🧀 Build
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the Docker image
+        run: docker build --file Dockerfile --tag dockertest --target builder .
+      - name: List Docker images
+        run: docker images
+      - name: Run tests
+        run: docker run dockertest npm run test
