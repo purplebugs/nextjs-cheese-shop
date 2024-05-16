@@ -11,23 +11,31 @@ Either use Docker or node.js
 
 ### Using docker
 
-1. [Install Docker](https://docs.docker.com/get-docker/) on your machine.
-2. Build your container: `docker compose build`
-3. Run your container: `docker compose up`
+First [Install Docker](https://docs.docker.com/get-docker/) on your machine
 
-You can view your images created with `docker images`
+Tip: View docker images with `docker images`
+
+#### Run app
+
+1. Build your container: `docker build -t nextjs-docker .`
+1. Run your container: `docker run -p 3000:3000 nextjs-docker`
+
+#### Run tests
+
+1. Create container `dockertest` to run tests towards: `docker build -t dockertest --target builder .`
+1. Run the tests using this container: `docker run dockertest npm run test`
 
 ### Using node.js
 
-1. Assumes node.js is installed and repo is cloned
+1. Assumes node.js is installed and repo is cloned. Install app `npm install`
 
-2. Run the dev server
+#### Run dev server
 
 ```bash
 npm run dev
 ```
 
-3. Run the tests
+#### Run app
 
 ```bash
 npm run test
