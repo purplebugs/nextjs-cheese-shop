@@ -2,7 +2,8 @@ import CheeseList from "@/components/CheeseList.js";
 import { cheese } from "@/lib/data.js";
 
 async function getData() {
-  // Would normally fetch data from an API
+  // Use of fetch would be for getting data from an external API
+  // Just returning cheese because it's a local data source
   return cheese;
 }
 
