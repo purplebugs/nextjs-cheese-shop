@@ -1,16 +1,11 @@
 import { Suspense } from "react";
 import Loading from "@/app/loading.js";
+import { cheese } from "@/lib/data.js";
 import { DeleteButton } from "@/components/DeleteButton.js";
 
 async function getData(id) {
-  const res = await fetch(`http://localhost:3000/api/cheese/${id}`);
-
-  if (!res?.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
+  const res = cheese.find((c) => c.id === id);
+  return res;
 }
 
 export default async function CheesePage(context) {

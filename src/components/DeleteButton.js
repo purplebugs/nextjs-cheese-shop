@@ -1,6 +1,8 @@
 "use client";
 
 async function deleteCheese(id) {
+  // This will send a DELETE request to the server
+  // Using fetch towards the API because we are in the client
   const res = await fetch(`/api/cheese/${id}`, { method: "DELETE" });
 
   if (!res.ok) {
